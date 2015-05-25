@@ -1,6 +1,6 @@
 <?php
 
-namespace controllers\UsersController;
+namespace controllers;
 
 class UsersController {
   public function actionIndex() {
