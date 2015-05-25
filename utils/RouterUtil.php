@@ -23,10 +23,16 @@ class RouterUtil {
   }
 
   protected function getControllerName($parsedUri) {
+    if ($parsedUri[1] === '') {
+      return 'controllers\\IndexController';
+    }
     return 'controllers\\'. ucfirst($parsedUri[1]) . 'Controller';
   }
 
   protected function getActionName($parsedUri) {
+    if ($parsedUri[1] === '') {
+      return 'actionIndex';
+    }
     if (!isset($parsedUri[2]) || empty($parsedUri[2])) {
       return 'actionIndex';
     }
