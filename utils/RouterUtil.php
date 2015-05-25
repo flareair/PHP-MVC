@@ -9,7 +9,7 @@ class RouterUtil {
 
   public function route($requestMethod, $requestUri, $getArray, $postArray) {
     $parsedUri = $this->parseUri($requestUri);
-    var_dump($parsedUri);
+    // var_dump($parsedUri);
     $controllerName = $this->getControllerName($parsedUri);
     $actionName = $this->getActionName($parsedUri);
     if (!$this->fireClass($controllerName, $actionName)) {
@@ -34,8 +34,8 @@ class RouterUtil {
   }
 
   protected function fireClass($controllerName, $actionName) {
-    var_dump($controllerName, $actionName);
-    var_dump(method_exists($controllerName, $actionName));
+    // var_dump($controllerName, $actionName);
+    // var_dump(method_exists($controllerName, $actionName));
     if (class_exists($controllerName) && method_exists($controllerName, $actionName)) {
       $controller = new $controllerName();
       $controller->$actionName();
