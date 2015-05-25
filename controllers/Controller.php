@@ -8,7 +8,7 @@ class Controller {
 
   }
 
-  public function render($viewName, $variables) {
+  public function render($viewName, $data = null) {
     $viewPath = $this->getViewPath($viewName);
     if (file_exists($viewPath)) {
       require($_SERVER['DOCUMENT_ROOT'] . '/views/partials/header.php');
