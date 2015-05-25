@@ -13,7 +13,7 @@ class RouterUtil {
     $controllerName = $this->getControllerName($parsedUri);
     $actionName = $this->getActionName($parsedUri);
     if (!$this->fireClass($controllerName, $actionName)) {
-      echo "error!";
+      require($_SERVER['DOCUMENT_ROOT'] . '/views/errors/404.php');
     }
   }
 
