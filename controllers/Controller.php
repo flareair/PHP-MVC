@@ -16,7 +16,7 @@ class Controller {
       require($_SERVER['DOCUMENT_ROOT'] . '/views/partials/footer.php');
     }
     else {
-      require($_SERVER['DOCUMENT_ROOT'] . '/views/errors/404.php');
+      require($_SERVER['DOCUMENT_ROOT'] . '/views/errors/500.php');
     }
   }
   private function getViewPath($viewName) {
