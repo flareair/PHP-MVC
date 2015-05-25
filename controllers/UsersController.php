@@ -1,9 +1,12 @@
 <?php
-
 namespace controllers;
 
-class UsersController {
+use controllers\Controller;
+
+class UsersController extends Controller {
+  public $pageName = 'Users page';
+
   public function actionIndex() {
-    echo 'Users controller fired!';
+    $this->render('index', 'Hello world!');
   }
 }
