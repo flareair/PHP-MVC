@@ -1,6 +1,6 @@
 <?php
 
-use utils\RouterUtil;
+use core\Router;
 
 define(ENV, 'develop');
 
@@ -9,9 +9,9 @@ if (ENV === 'develop') {
   error_reporting(E_ALL);
 }
 
-require($_SERVER['DOCUMENT_ROOT'] . '/utils/__autoload.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/core/__autoload.php');
 
 
-$router = new RouterUtil();
+$router = new Router();
 
 $router->route($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI'], $_GET, $_POST);

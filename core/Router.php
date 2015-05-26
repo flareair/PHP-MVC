@@ -1,12 +1,12 @@
 <?php
 
-namespace utils;
+namespace core;
 
 /**
  * Basis Router class
  */
 
-class RouterUtil {
+class Router {
 
   /**
     * This method selects propertly controller and its action, or render 404
