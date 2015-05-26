@@ -1,6 +1,6 @@
 <?php
 
-use core\Router;
+use core\routing\Router;
 
 define(ENV, 'develop');
 

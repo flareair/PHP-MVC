@@ -1,7 +1,7 @@
 <?php
 namespace controllers;
 
-use controllers\Controller;
+use core\controllers\Controller;
 
 class UsersController extends Controller {
   public $pageName = 'Users page';

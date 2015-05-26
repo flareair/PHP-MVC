@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-use controllers\Controller;
+use core\controllers\Controller;
 
 class IndexController extends Controller {
   public function actionIndex() {
